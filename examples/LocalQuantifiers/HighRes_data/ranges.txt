@@ -1,0 +1,11 @@
+values_list = ['_PE','_F','_LOCAL_VAR','_CV2']
+local_time_window_len_list = [5,10,20,30,50,100]
+list_ylim = [[-0.10,0.20],[-0.02,0.6],[-20000,100000],[0,30]]
+
+values_list = ['_PE','_F']
+local_time_window_len_list = [5,10]
+list_ylim = [[-0.10,0.4],[-0.02,1.2]]
+
+values_list = ['_PE']
+local_time_window_len_list = [5]
+list_ylim = [[-0.10,1]]

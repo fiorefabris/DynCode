@@ -1,0 +1,179 @@
+execut.py: python file to get the analysis pipeline of the Dataset. 
+FOLDER Data_Analysis: folder that contains the Analysis detailed below. 
+
+# =============================================================================
+# #Preprocessing
+# =============================================================================
+
+keys: 
+Dataset name: 2018_E1_28
+
+
+
+*** raw_data.pdf: the raw data is plotted. Time Series with more than 165 frames are considered (shorter than 4.5 hours). 
+Time Series has erased the last 15 points. 
+
+*** .xlsx, sheet "ID_Data": ['Cell_Number', 'First_spot_ID', 'Track_ID', 'Starting_frame', 'Ending_frame', 'Condition']
+are indicated for each traze of the dataset.
+
+*** quality_trackinbg_test.pdf: The raw data and the tracking variance are plotted. 
+
+
+
+
+# =============================================================================
+# #Min Polynomial Detrend
+# =============================================================================
+
+First, we find the local minima considering a time window of 5 frames on each time serie.
+Then, we make a polynomial fit over the given minima & the first and last point of the Time Serie.
+It's degree is (2 + #of minima)/delta. We have seen many examples and we choose delta = 3. 
+
+
+*** .xlsx, sheet "_MinPolDT_Data": Filter specifications are write down: 
+the order of the polinomia, the number of minima and the polonomia coefficients for each time serie of teh dataset.
+
+*** filtermin_pol_order.png: the order of the polynomial fit is plotted for each traze.
+
+*** min_detrend.pdf: The detrend and the raw data are plotted.
+
+*** min_detrended_TS.pdf: The detrended time series are plotted.
+
+
+# =============================================================================
+# #Butter_Filter detrend
+# =============================================================================
+
+This filter is defined in terms of frequency. Is designed to be  a *square filter*: is maximally flat 
+ in the passband and rolls off towards zero in the stopband, in terms of frequency. 
+ Then, the way we apply this filter to the data is by using another method, called
+  *zero phase filtering*. This is a zero phase filter has the advantage of providing no 
+  phase distortion (time phase or linear phase) cause we apply the filter *forward and backward* 
+  in time.
+In the calculation I've performed, this w frequency is normalized by the nyquist frequency ,
+ for ex, a w_cutoff = 0.6  means a w_real_cutoff_value = 0.6*W_nyquist).  In our case, is n = 4.
+We are performing a Band Pass Filter, with w<0.025 & w>0.6 are gone. This means that we are
+considering periods T that 1.46 minutes <T< 35 minutes. 
+
+
+*** BPfilt_detrend.pdf: The detrend and the raw data are plotted.
+
+*** BPfilt_detrended_TS.pdf: The detrended time series are plotted.
+
+
+# =============================================================================
+# #Statistics
+# =============================================================================
+
+
+*** amp_Histograms.pdf: amplitude histograms for the raw & detrended data.
+x=0 is indicated with a dotted line. The integral over the range values is 1 (normed).
+DT_MEAN_INTENSITY: detrended data using the min pol detrend strategy.
+MEAN_INTENSITY_BP: detrended data using the Butter filter strategy
+
+*** cum_amp_Histograms.pdf: amplitude cumulative histograms for the raw & detrended data.
+x=0 is indicated with a dotted line.
+
+
+*** statistics.pdf: Boxplot of some statistical measures: Mean of the amplitude, Variance of the amplitude, 
+length of the Time Series & Median of the amplitude  for each concentration strategy and condition. 
+Finally, the percentiles [0,3,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,97,100] are 
+plotted  for each concentration strategy and condition. The scale is conserved between rows. 
+
+
+# =============================================================================
+# #Find_Peaks
+# =============================================================================
+
+Look for local maxima higher than a threshold 
+[Parameters = threshold, order of the finding peaks – definition of the local neighbors].
+
+The order of the algorithm tell us wich time resolution do we have. 
+For example, if we have an “order 2”, it means we have a time window of 3 frames between 
+each peak we can identify. That means 3 frames *105/60 = 5.25 minutes.  
+The acquisition frequency is 1.75 minutes x frame.
+
+Once we have detrended the data, if we perform the analysis setting order=2, we do not
+identify many spoureus peaks, and we win some time between peaks resolution. That is the
+main reason why I perfomrmed the analysis setting order = 2.
+
+keys:
+min_detrend: data detrended with the min pol fit strstegy
+butterfilt_detrend: data detrended with the butter filter strstegy
+
+
+
+*** threshold_analysis_(#).pdf: Each column corresponds to a different detrending strategy.
+Remember that we can't compare amplitudes between each detrending strategy, so we
+can't compare Threshold values as well. 
+
+(FIRST ROW) Density of peaks as a function of the Threshold for order 2, for 0ng (negative control) and 
+WT_ESL (positive control) conditions. 
+
+The Density of peaks is calculated as follows for each Threshold and each condition:
+    1 - for each traze/cell, we calculate the #_of_peaks/total_frames.
+    2 - we add all the results, having a "density of peaks" for each Threshold and condition
+Finally, we divide each result for the maximum value obtained (we normalize).
+
+The cross indicates the threshold we need to set if we assume that (#) percent of the 0ng
+are peaks. 
+
+(SECOND ROW) The 0ng/WT ratio  & WT-0ng difference of peaks densities as a function of the Threshold. 
+The densities are the same as the FIRST ROW plot. 
+
+The point where the ratio is lower than the 5% is indicated. 
+The point where the difference is maximal is indicated. 
+
+
+*** min_detrended_peaks_TS.pdf: The detrended time series are plotted using the min_pol_fit detrending
+strategy. The peaks finded using order=2 and Threshold = 2100 (ratio < 5%) are marked. 
+
+*** min_detrended_time_bet_peaks_hist.pdf: Histogram of the distance between peaks for each relevant condition.
+Bins are indicated. The histograms are normed such that the sum of the bins values is 1. The scale
+is the same for all the histograms. The time is in minutes. 
+
+*** min_detrended_time_bet_peaks_hist_all.pdf: Histogram of the distance between peaks for each condition.
+The center values of the bins are indicated. The histograms are not normed. The time is in minutes. 
+
+*** min_detrended_time_bet_peaks_st.pdf: 
+LEFT) same as min_detrended_time_bet_peaks_hist.pdf
+RIGHT) Heatmap of the time series where the peaks are marked.Each row of each heatmap
+corresponds to one cell of the condition detailed on the title of the heatmap.
+ All the heatmaps have the same scale. 
+ 
+*** min_detrended_time_bet_peaks_st2.pdf: 
+UP) Statistics of peaks for each condition. Each color dot corresponds to a cell. The median 
+is marked with a gray dot line. 
+DOWN) same as min_detrended_time_bet_peaks_hist_all.pdf
+
+*** butterfilt_detrended_peaks_TS.pdf: The detrended time series are plotted using the butter filter detrending
+strategy. The peaks finded using order=2 and Threshold = 900 (ratio < 5%) are marked.
+
+*** butterfilt_detrended_time_bet_peaks_hist.pdf: Histogram of the distance between peaks for each relevant condition.
+Bins are indicated. The histograms are normed such that the sum of the bins values is 1.  The scale
+is the same for all the histograms.The time is in minutes. 
+
+*** butterfilt_detrended_time_bet_peaks_hist_all.pdf: Histogram of the distance between peaks for each condition.
+The center values of the bins are indicated. The histograms are not normed. The time is in minutes. 
+
+*** butterfilt_detrended_time_bet_peaks_st.pdf: 
+LEFT) same as butterfilt_detrended_time_bet_peaks_hist.pdf
+RIGHT) Heatmap of the time series where the peaks are marked.Each row of each heatmap
+corresponds to one cell of the condition detailed on the title of the heatmap.
+ All the heatmaps have the same scale. 
+ 
+*** butterfilt_detrended_time_bet_peaks_st2.pdf: 
+UP) Statistics of peaks for each condition. Each color dot corresponds to a cell. The median 
+is marked with a gray dot line. 
+DOWN) same as butterfilt_detrended_time_bet_peaks_hist_all.pdf
+
+
+
+
+"EXTRA" FOLDER: Statistics and Time Series for peak finding order 3 (time window of 7 frames).
+The threshold is variable and indicated on the name of each file. 
+
+
+
+
+

@@ -1,0 +1,23 @@
+ lambda = 1/(32.23)
+ 
+ finished a pulse after sampling : cell  8
+finished a pulse after sampling : cell  9
+finished a pulse after sampling : cell  13
+finished a pulse after sampling : cell  15
+finished a pulse after sampling : cell  22
+finished a pulse after sampling : cell  28
+finished a pulse after sampling : cell  30
+finished a pulse after sampling : cell  41
+finished a pulse after sampling : cell  49
+finished a pulse after sampling : cell  51
+finished a pulse after sampling : cell  54
+finished a pulse after sampling : cell  57
+finished a pulse after sampling : cell  58
+finished a pulse after sampling : cell  60
+finished a pulse after sampling : cell  62
+finished a pulse after sampling : cell  66
+finished a pulse after sampling : cell  68
+
+outliers : 41
+total_data: 112
+an_WT_ESL // # activity cells = 0// # pulsing cells = 67// # silent cells = 2

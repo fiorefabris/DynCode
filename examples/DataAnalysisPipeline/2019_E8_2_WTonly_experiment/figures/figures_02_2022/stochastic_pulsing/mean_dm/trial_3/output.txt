@@ -1,0 +1,19 @@
+lambda = 1/32.23 
+
+finished a pulse after sampling : cell  6
+finished a pulse after sampling : cell  8
+finished a pulse after sampling : cell  20
+finished a pulse after sampling : cell  26
+finished a pulse after sampling : cell  29
+finished a pulse after sampling : cell  30
+finished a pulse after sampling : cell  35
+finished a pulse after sampling : cell  39
+finished a pulse after sampling : cell  46
+finished a pulse after sampling : cell  50
+finished a pulse after sampling : cell  51
+finished a pulse after sampling : cell  56
+finished a pulse after sampling : cell  60
+
+outliers : 34
+total_data: 99
+an_WT_ESL // # activity cells = 0// # pulsing cells = 65// # silent cells = 4

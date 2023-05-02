@@ -1,0 +1,53 @@
+lambda              = 0.4700737613934626 
+cov                 = 0.0028066
+
+finished a pulse after sampling : cell  1
+finished a pulse after sampling : cell  3
+finished a pulse after sampling : cell  4
+finished a pulse after sampling : cell  7
+finished a pulse after sampling : cell  8
+finished a pulse after sampling : cell  9
+finished a pulse after sampling : cell  10
+finished a pulse after sampling : cell  11
+finished a pulse after sampling : cell  12
+finished a pulse after sampling : cell  13
+finished a pulse after sampling : cell  14
+finished a pulse after sampling : cell  16
+finished a pulse after sampling : cell  17
+finished a pulse after sampling : cell  18
+finished a pulse after sampling : cell  19
+finished a pulse after sampling : cell  21
+finished a pulse after sampling : cell  23
+finished a pulse after sampling : cell  24
+finished a pulse after sampling : cell  25
+finished a pulse after sampling : cell  26
+finished a pulse after sampling : cell  27
+finished a pulse after sampling : cell  31
+finished a pulse after sampling : cell  34
+finished a pulse after sampling : cell  35
+finished a pulse after sampling : cell  38
+finished a pulse after sampling : cell  40
+finished a pulse after sampling : cell  41
+finished a pulse after sampling : cell  43
+finished a pulse after sampling : cell  44
+finished a pulse after sampling : cell  45
+finished a pulse after sampling : cell  46
+finished a pulse after sampling : cell  47
+finished a pulse after sampling : cell  48
+finished a pulse after sampling : cell  50
+finished a pulse after sampling : cell  52
+finished a pulse after sampling : cell  54
+finished a pulse after sampling : cell  56
+finished a pulse after sampling : cell  57
+finished a pulse after sampling : cell  58
+finished a pulse after sampling : cell  59
+finished a pulse after sampling : cell  60
+finished a pulse after sampling : cell  61
+finished a pulse after sampling : cell  62
+finished a pulse after sampling : cell  65
+finished a pulse after sampling : cell  66
+finished a pulse after sampling : cell  68
+
+outliers : 0.0
+total_data: 661
+an_WT_ESL // # activity cells = 0// # pulsing cells = 69// # silent cells = 0

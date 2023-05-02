@@ -1,0 +1,42 @@
+lambda =   1/(32.23 - 34.45*75/100)
+
+
+finished a pulse after sampling : cell  1
+finished a pulse after sampling : cell  3
+finished a pulse after sampling : cell  6
+finished a pulse after sampling : cell  7
+finished a pulse after sampling : cell  10
+finished a pulse after sampling : cell  13
+finished a pulse after sampling : cell  14
+finished a pulse after sampling : cell  17
+finished a pulse after sampling : cell  21
+finished a pulse after sampling : cell  23
+finished a pulse after sampling : cell  24
+finished a pulse after sampling : cell  25
+finished a pulse after sampling : cell  26
+finished a pulse after sampling : cell  30
+finished a pulse after sampling : cell  31
+finished a pulse after sampling : cell  33
+finished a pulse after sampling : cell  35
+finished a pulse after sampling : cell  36
+finished a pulse after sampling : cell  37
+finished a pulse after sampling : cell  38
+finished a pulse after sampling : cell  39
+finished a pulse after sampling : cell  40
+finished a pulse after sampling : cell  41
+finished a pulse after sampling : cell  44
+finished a pulse after sampling : cell  45
+finished a pulse after sampling : cell  48
+finished a pulse after sampling : cell  50
+finished a pulse after sampling : cell  53
+finished a pulse after sampling : cell  55
+finished a pulse after sampling : cell  56
+finished a pulse after sampling : cell  61
+finished a pulse after sampling : cell  62
+finished a pulse after sampling : cell  64
+finished a pulse after sampling : cell  68 
+
+
+outliers : 16
+total_data: 418
+an_WT_ESL // # activity cells = 0// # pulsing cells = 69// # silent cells = 0

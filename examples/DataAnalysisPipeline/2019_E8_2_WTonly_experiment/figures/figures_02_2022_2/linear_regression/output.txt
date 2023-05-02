@@ -1,0 +1,17 @@
+lambda                     = 0.02316484306097727
+np.exp(interpcept)         = 0.0210815825597889
+lambda - np.exp(intercept) = 0.00208326
+
+finished a pulse after sampling : cell  0
+finished a pulse after sampling : cell  1
+finished a pulse after sampling : cell  7
+finished a pulse after sampling : cell  15
+finished a pulse after sampling : cell  27
+finished a pulse after sampling : cell  33
+finished a pulse after sampling : cell  47
+finished a pulse after sampling : cell  54
+finished a pulse after sampling : cell  63
+
+outliers : 31
+total_data: 72
+an_WT_ESL // # activity cells = 0// # pulsing cells = 58// # silent cells = 11

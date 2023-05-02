@@ -1,0 +1,8 @@
+lambda              = 0.029613738872277032
+cov                 = 2.26447041e-06
+
+outliers : 29
+total_data: 91
+an_WT_ESL // # activity cells = 0// # pulsing cells = 64// # silent cells = 5
+
+La idea es que fiteo los datos relevantes (hasta que tenemos un bin = 0)

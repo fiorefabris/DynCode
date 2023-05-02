@@ -1,0 +1,15 @@
+ESC
+
+0- Download the data. We consider time series with more than 150 frames. 
+
+1- we deleted the last 20 frames (about 7 min) of the time series of dividing cells only. In this case, only 1 WT condition.
+
+2- smoothing. We filtered the highest frequencies in the data using a moving average window of 3 frames of duration. 
+
+3- max and minima. searched the time series for all the local maxima and minima. We compared each value xi of the time series with its immediate neighbours
+
+4- 
+
+
+EpiES
+0- Download the data. We consider time series with more than 150 frames. The amplitude range is smaller than in the ESC case. 

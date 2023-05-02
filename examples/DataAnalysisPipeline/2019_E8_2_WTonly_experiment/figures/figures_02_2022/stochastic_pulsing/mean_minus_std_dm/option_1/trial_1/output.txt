@@ -1,0 +1,25 @@
+1/(32.23 - 34.45/2)
+
+finished a pulse after sampling : cell  1
+finished a pulse after sampling : cell  2
+finished a pulse after sampling : cell  8
+finished a pulse after sampling : cell  9
+finished a pulse after sampling : cell  12
+finished a pulse after sampling : cell  13
+finished a pulse after sampling : cell  14
+finished a pulse after sampling : cell  15
+finished a pulse after sampling : cell  17
+finished a pulse after sampling : cell  21
+finished a pulse after sampling : cell  31
+finished a pulse after sampling : cell  34
+finished a pulse after sampling : cell  44
+finished a pulse after sampling : cell  45
+finished a pulse after sampling : cell  46
+finished a pulse after sampling : cell  48
+finished a pulse after sampling : cell  49
+finished a pulse after sampling : cell  56
+finished a pulse after sampling : cell  60 
+
+outliers : 44
+total_data: 248
+an_WT_ESL // # activity cells = 0// # pulsing cells = 69// # silent cells = 0

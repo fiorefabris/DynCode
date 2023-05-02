@@ -1,0 +1,15 @@
+lambda                     =  0.024194744962723794 
+cov                        = 4.21207261e-06
+
+finished a pulse after sampling : cell  4
+finished a pulse after sampling : cell  5
+finished a pulse after sampling : cell  13
+finished a pulse after sampling : cell  14
+finished a pulse after sampling : cell  41
+finished a pulse after sampling : cell  44
+finished a pulse after sampling : cell  50
+finished a pulse after sampling : cell  62
+
+outliers : 35
+total_data: 71
+an_WT_ESL // # activity cells = 0// # pulsing cells = 64// # silent cells = 5
