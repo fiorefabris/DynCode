@@ -1,4 +1,4 @@
-##Data Analysis module
+#Data Analysis module
 
 Class **TimeSerieDC** for importing and manipulating data from FIJI tracking file
  - raw data visualization & quality traking test implamentation (see Preprocesing module)
